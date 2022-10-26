@@ -49,9 +49,10 @@
                     </Grid.ColumnDefinitions>
 
                     <TextBlock Text="Log in"
-                               Foreground="black"
+                               Foreground="Black"
                                FontSize="15"
                                FontFamily="Montserrat"
+                               FontWeight="Medium"
                                Grid.Column="0"
                                VerticalAlignment="center"
                                Margin="10,0,0,0"/>
@@ -151,30 +152,79 @@
                     <TextBlock Text="Username"
                                Foreground="black"
                                FontSize="12"
-                               FontWeight="Medium"
+                               FontWeight="Bold"
                                FontFamily="Monserrat"
                                Margin="0,35,0,0"/>
 
                     <TextBox x:Name="txtUser"
                              FontSize="13"
-                             FontWeight="Medium"
+                             FontWeight="SemiBold"
                              FontFamily="Montserrat"
                              Foreground="Black"
                              CaretBrush="Black"
-                             BorderBrush="#FF0000"
                              BorderThickness="0,0,0,2"
                              Height="28"
-                             VerticalContentAlignment="center"
+                             VerticalContentAlignment="Center"
                              Margin="0,5,0,0"
-                             Padding="26">
-                        
+                             Padding="26,0,0,0">
+
                         <TextBox.Background>
                             <ImageBrush ImageSource="C:\Scheewl\Kørselslog\Images\UserLogo1.png"
                                         Stretch="None"
                                         AlignmentX="Left"/>
                         </TextBox.Background>
+
+                        <TextBox.Style>
+                            <Style TargetType="TextBox">
+                                <Setter Property="BorderBrush" Value="Red"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="BorderBrush" Value="Red"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBox.Style>
                         
                     </TextBox>
+
+                    <TextBlock Text="Password"
+                               Foreground="black"
+                               FontSize="12"
+                               FontWeight="Bold"
+                               FontFamily="Monserrat"
+                               Margin="0,35,0,0"/>
+
+                    <TextBox x:Name="txtPass"
+                             FontSize="13"
+                             FontWeight="SemiBold"
+                             FontFamily="Montserrat"
+                             Foreground="Black"
+                             CaretBrush="Black"
+                             BorderThickness="0,0,0,2"
+                             Height="28"
+                             VerticalContentAlignment="Center"
+                             Margin="0,5,0,0"
+                             Padding="26,0,0,0">
+
+                        <TextBox.Background>
+                            <ImageBrush ImageSource="C:\Scheewl\Kørselslog\Images\KeyLogo1.png"
+                                        Stretch="None"
+                                        AlignmentX="Left"/>
+                        </TextBox.Background>
+
+                        <TextBoxBase.Style>
+                            <Style TargetType="TextBoxBase">
+                                <Setter Property="BorderBrush" Value="Red"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="BorderBrush" Value="Red"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBoxBase.Style>
+
+                    </TextBox>
+
 
 
                 </StackPanel>
