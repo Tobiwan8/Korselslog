@@ -162,7 +162,6 @@
                              FontFamily="Montserrat"
                              Foreground="Black"
                              CaretBrush="Black"
-                             BorderThickness="0,0,0,2"
                              Height="28"
                              VerticalContentAlignment="Center"
                              Margin="0,5,0,0"
@@ -176,15 +175,35 @@
 
                         <TextBox.Style>
                             <Style TargetType="TextBox">
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
                                 <Setter Property="BorderBrush" Value="Red"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="BorderBrush" Value="Red"/>
+                                        <Setter Property="BorderBrush" Value="DarkOrange"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
                         </TextBox.Style>
-                        
+
+                        <TextBox.Template>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Grid>
+                                    <Border x:Name="textBoxBorder"
+                                        BorderThickness="0,0,0,2"
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"/>
+                                    <ScrollViewer Margin="0"
+                                                x:Name="PART_ContentHost" />
+                                </Grid>
+
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="False">
+                                        <Setter TargetName="textBoxBorder" Property="Background" Value="{Binding Background,RelativeSource={RelativeSource TemplatedParent}}"/>
+                                        <Setter TargetName="textBoxBorder" Property="BorderBrush" Value="{Binding BorderBrush, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </TextBox.Template>
                     </TextBox>
 
                     <TextBlock Text="Password"
@@ -194,41 +213,108 @@
                                FontFamily="Monserrat"
                                Margin="0,35,0,0"/>
 
-                    <TextBox x:Name="txtPass"
+                    <PasswordBox x:Name="txtPass"
                              FontSize="13"
                              FontWeight="SemiBold"
-                             FontFamily="Montserrat"
+                             FontFamily="Barlow"
                              Foreground="Black"
                              CaretBrush="Black"
-                             BorderThickness="0,0,0,2"
                              Height="28"
                              VerticalContentAlignment="Center"
                              Margin="0,5,0,0"
                              Padding="26,0,0,0">
 
-                        <TextBox.Background>
+                        <PasswordBox.Background>
                             <ImageBrush ImageSource="C:\Scheewl\Kørselslog\Images\KeyLogo1.png"
                                         Stretch="None"
                                         AlignmentX="Left"/>
-                        </TextBox.Background>
+                        </PasswordBox.Background>
 
-                        <TextBoxBase.Style>
-                            <Style TargetType="TextBoxBase">
+                        <PasswordBox.Style>
+                            <Style TargetType="PasswordBox">
+                                <Setter Property="OverridesDefaultStyle" Value="True"/>
                                 <Setter Property="BorderBrush" Value="Red"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="BorderBrush" Value="Red"/>
+                                        <Setter Property="BorderBrush" Value="DarkOrange"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
-                        </TextBoxBase.Style>
+                        </PasswordBox.Style>
 
-                    </TextBox>
+                        <PasswordBox.Template>
+                            <ControlTemplate TargetType="{x:Type PasswordBox}">
+                                <Grid>
+                                    <Border x:Name="textBoxBorder"
+                                        BorderThickness="0,0,0,2"
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"/>
+                                    <ScrollViewer Margin="0"
+                                                x:Name="PART_ContentHost" />
+                                </Grid>
 
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="False">
+                                        <Setter TargetName="textBoxBorder" Property="Background" Value="{Binding Background,RelativeSource={RelativeSource TemplatedParent}}"/>
+                                        <Setter TargetName="textBoxBorder" Property="BorderBrush" Value="{Binding BorderBrush, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </PasswordBox.Template>
+                    </PasswordBox>
 
+                    <Button x:Name="btnLogin"                       
+                            BorderThickness="0"
+                            Content="Log In"
+                            FontSize="18"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="2"
+                            Margin="0,50,0,0">
+                        <!--Click="btnLogin_Click">-->
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#CC6600"/>
+                                <Setter Property="Foreground" Value="#FFFF99"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FFFF99"/>
+                                        <Setter Property="Foreground" Value="#CC6600"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="150" Height="40"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="center"
+                                                      HorizontalAlignment="center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0,20,0,0">
+                        <TextBlock Text="Forgot Password?"
+                               Foreground="black"
+                               FontSize="12"
+                               FontWeight="Bold"
+                               FontFamily="Monserrat"/>
+                        <TextBlock Text="Reset"
+                               Foreground="black"
+                               FontSize="12"
+                               FontWeight="Black"
+                               FontFamily="Monserrat"
+                               Cursor="Hand"
+                               Margin="8,0,0,0"/>
+                    </StackPanel>
 
                 </StackPanel>
-
             </Grid>
         </Border>
     </Border>
