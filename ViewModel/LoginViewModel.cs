@@ -36,8 +36,8 @@ namespace Kørselslog.ViewModel
             }
         }
         public string? ErrorMessage 
-        { 
-            get { return _errorMessage} 
+        {
+            get { return _errorMessage; } 
             set 
             { 
                 _errorMessage = value;
