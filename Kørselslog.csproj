@@ -8,9 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Remove="Images\KeyLogo1.png" />
+    <None Remove="Images\LoginBackground.jpg" />
+    <None Remove="Images\UserLogo1.png" />
+    <None Remove="Images\WindowLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\KeyLogo1.png" />
+    <Resource Include="Images\LoginBackground.jpg" />
+    <Resource Include="Images\UserLogo1.png" />
+    <Resource Include="Images\WindowLogo.png" />
   </ItemGroup>
 
 </Project>
