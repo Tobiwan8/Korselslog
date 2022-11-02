@@ -15,7 +15,7 @@
 
     <Border CornerRadius="20">
         <Border.Background>
-            <ImageBrush ImageSource="C:\Scheewl\Kørselslog\Images\LoginBackground.jpg"/>
+            <ImageBrush ImageSource="/Images/LoginBackground.jpg"/>
         </Border.Background>
         <Border CornerRadius="18"
             BorderThickness="5"
@@ -129,7 +129,7 @@
                             Orientation="Vertical"
                             Margin="0,35,0,0">
 
-                    <Image Source="C:\Scheewl\Kørselslog\Images\WindowLogo.png"
+                    <Image Source="/Images/WindowLogo.png"
                            Width="100" Height="100"/>
 
                     <TextBlock Text="TECK LOG"
@@ -168,7 +168,7 @@
                              Padding="26,0,0,0">
 
                         <TextBox.Background>
-                            <ImageBrush ImageSource="C:\Scheewl\Kørselslog\Images\UserLogo1.png"
+                            <ImageBrush ImageSource="/Images/UserLogo1.png"
                                         Stretch="None"
                                         AlignmentX="Left"/>
                         </TextBox.Background>
@@ -225,7 +225,7 @@
                              Padding="26,0,0,0">
 
                         <PasswordBox.Background>
-                            <ImageBrush ImageSource="C:\Scheewl\Kørselslog\Images\KeyLogo1.png"
+                            <ImageBrush ImageSource="/Images/KeyLogo1.png"
                                         Stretch="None"
                                         AlignmentX="Left"/>
                         </PasswordBox.Background>
