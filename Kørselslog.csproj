@@ -20,6 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="runtime.native.System.Data.SqlClient.sni" Version="4.7.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\KeyLogo1.png" />
     <Resource Include="Images\LoginBackground.jpg" />
     <Resource Include="Images\UserLogo1.png" />
