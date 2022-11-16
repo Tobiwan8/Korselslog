@@ -123,6 +123,36 @@
                         </Button.Template>
                     </Button>
                 </Grid>
+
+                <DataGrid 
+                    x:Name="DGUser"
+                    BorderThickness="3"
+                    BorderBrush="#CC6600"
+                    IsReadOnly="True"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,5,0"
+                    AutoGenerateColumns="False"      
+                    Grid.Row="1">
+
+                    <DataGrid.Style>
+                        <Style TargetType="DataGrid">
+                            <Setter Property="Background" Value="#CC6600"/>
+                            <Setter Property="Foreground" Value="AliceBlue"/>
+                        </Style>
+                    </DataGrid.Style>
+
+                    <DataGrid.Template>
+                        <ControlTemplate TargetType="{x:Type DataGrid}">
+                            <Border CornerRadius="9"
+                                    Width="400"
+                                    Height="500"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Right"/>
+                            </Border>
+                        </ControlTemplate>
+                    </DataGrid.Template>
+                </DataGrid>
             </Grid>
         </Border>
     </Border>

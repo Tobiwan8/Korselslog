@@ -54,8 +54,8 @@
                                FontFamily="Montserrat"
                                FontWeight="Medium"
                                Grid.Column="0"
-                               VerticalAlignment="center"
-                               Margin="10,0,0,0"/>
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0" Height="18"/>
 
                     <Button x:Name="BtnMinimize"                       
                             BorderThickness="0"
@@ -177,6 +177,8 @@
                             <Style TargetType="TextBox">
                                 <Setter Property="OverridesDefaultStyle" Value="True"/>
                                 <Setter Property="BorderBrush" Value="Red"/>
+                                <Setter Property="FontFamily" Value="Monserrat"/>
+                                <Setter Property="FontSize" Value="15"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter Property="BorderBrush" Value="DarkOrange"/>
@@ -235,6 +237,8 @@
                             <Style TargetType="PasswordBox">
                                 <Setter Property="OverridesDefaultStyle" Value="True"/>
                                 <Setter Property="BorderBrush" Value="Red"/>
+                                <Setter Property="FontFamily" Value="Monserrat"/>
+                                <Setter Property="FontSize" Value="15"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter Property="BorderBrush" Value="DarkOrange"/>
