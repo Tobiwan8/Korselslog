@@ -48,7 +48,7 @@
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="Log in"
+                    <TextBlock Text="Kørselslog"
                                Foreground="Black"
                                FontSize="15"
                                FontFamily="Montserrat"
