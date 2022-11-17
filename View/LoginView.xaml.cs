@@ -29,7 +29,7 @@ namespace Kørselslog.View
             Application.Current.Shutdown();
         }
 
-        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        private void TxtPass_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
