@@ -19,7 +19,7 @@ namespace Kørselslog.View
         {
             string connectionString = @"Server = DESKTOP-RDJ3VF9; Initial Catalog = Korselslog; persist security info = true; User ID=sa; Password=funnyHAHA";
             SqlConnection sqlConnection = new(connectionString);
-            SqlCommand sqlCommand = new("SELECT UserID, UserName, Name, LastName, Email FROM [User]", sqlConnection);
+            SqlCommand sqlCommand = new("SELECT UserId, UserName, Name, LastName, Email FROM [User]", sqlConnection);
             DataTable dt = new();
 
             sqlConnection.Open();

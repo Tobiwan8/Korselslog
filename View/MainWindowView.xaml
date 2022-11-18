@@ -124,53 +124,61 @@
                     </Button>
                 </Grid>
 
-                <DataGrid Template="{DynamicResource DataGridTemplate1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" 
-                    x:Name="DGUser"
-                    IsReadOnly="True"
-                    HorizontalAlignment="Right"
-                    Margin="0,0,5,0"
-                    AutoGenerateColumns="False"
-                    Grid.Row="1">
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="450"/>
+                    </Grid.ColumnDefinitions>
 
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding UserId}" 
-                                            Header="ID"
-                                            IsReadOnly="True"
-                                            CanUserResize="False"
-                                            Width="auto"/>
-                        <DataGridTextColumn Binding="{Binding UserName}" 
-                                            Header="Brugernavn"
-                                            IsReadOnly="True"
-                                            CanUserResize="False"
-                                            Width="auto"/>
-                        <DataGridTextColumn Binding="{Binding Name}"
-                                            Header="Navn"
-                                            IsReadOnly="True"
-                                            CanUserResize="False"
-                                            Width="auto"/>
-                        <DataGridTextColumn Binding="{Binding LastName}" 
-                                            Header="Efternavn"
-                                            IsReadOnly="True"
-                                            CanUserResize="False"
-                                            Width="auto"/>
-                        <DataGridTextColumn Binding="{Binding Email}" 
-                                            Header="Email"
-                                            IsReadOnly="True"
-                                            CanUserResize="False"
-                                            Width="auto"/>
+                    <Grid 
+                        Grid.Column="1"
+                        Width="auto"
+                        Margin="0,15,15,15">
+                        
+                        <DataGrid 
+                            x:Name="DGUser"
+                            IsReadOnly="True"
+                            HorizontalAlignment="Right"
+                            BorderThickness="0"
+                            AutoGenerateColumns="False"
+                            Background="{Binding}">
 
-                        <DataGridTemplateColumn Header="Id">
-                            
-                        </DataGridTemplateColumn>
-                    </DataGrid.Columns>
 
-                    <DataGrid.Style>
-                        <Style TargetType="DataGrid">
-                            <Setter Property="Background" Value="#CC6600"/>
-                            <Setter Property="Foreground" Value="AliceBlue"/>
-                        </Style>
-                    </DataGrid.Style>
-                </DataGrid>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding UserId}" 
+                                                    Header="ID"
+                                                    IsReadOnly="True"
+                                                    CanUserResize="True"
+                                                    Width="30"/>
+                                <DataGridTextColumn Binding="{Binding UserName}" 
+                                                    Header="Brugernavn"
+                                                    IsReadOnly="True"
+                                                    CanUserResize="True"
+                                                    Width="100"/>
+                                <DataGridTextColumn Binding="{Binding Name}"
+                                                    Header="Navn"
+                                                    IsReadOnly="True"
+                                                    CanUserResize="True"
+                                                    Width="100"/>
+                                <DataGridTextColumn Binding="{Binding LastName}" 
+                                                    Header="Efternavn"
+                                                    IsReadOnly="True"
+                                                    CanUserResize="True"
+                                                    Width="100"/>
+                                <DataGridTextColumn Binding="{Binding Email}" 
+                                                    Header="Email"
+                                                    IsReadOnly="True"
+                                                    CanUserResize="True"
+                                                    Width="170"/>
+                            </DataGrid.Columns>
+                            <DataGrid.Style>
+                                <Style TargetType="{x:Type DataGridColumnHeader}">
+                                    
+                                </Style>
+                            </DataGrid.Style>
+                        </DataGrid>
+                    </Grid>
+                </Grid>
             </Grid>
         </Border>
     </Border>
