@@ -139,16 +139,17 @@
                             x:Name="DGUser"
                             IsReadOnly="True"
                             HorizontalAlignment="Right"
+                            FontFamily="Montserrat"
                             BorderThickness="0"
                             AutoGenerateColumns="False"
                             Background="{Binding}"
-                            CanUserResizeRows="False">
+                            CanUserResizeRows="False"
+                            RowHeaderWidth="0"
+                            GridLinesVisibility="None">
 
                             <DataGrid.ColumnHeaderStyle>
                                 <Style TargetType="{x:Type DataGridColumnHeader}">
                                     <Setter Property="OverridesDefaultStyle" Value="True"/>
-                                    <Setter Property="Background" Value="#CC6600"/>
-                                    <Setter Property="SeparatorBrush" Value="#CC6600"/>
                                     <Setter Property="FontWeight" Value="Bold"/>
                                     <Setter Property="Template">
                                         <Setter.Value>
@@ -183,7 +184,6 @@
                                                 </ControlTemplate.Triggers>
                                             </ControlTemplate>
                                         </Setter.Value>
-                                        
                                     </Setter>
 
                                     <Style.Triggers>
@@ -198,8 +198,41 @@
 
                             <DataGrid.CellStyle>
                                 <Style TargetType="{x:Type DataGridCell}">
-                                    <Setter Property="Background" Value="#FFFF99"/>
-                                    <Setter Property="BorderBrush" Value="#CC6600"/>
+                                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                                <Grid>
+                                                    <Border x:Name="cellBorder"
+		                                                    BorderThickness="0.5"
+		                                                    Padding="3,0,3,0">
+                                                        <Border.BorderBrush>
+                                                            <LinearGradientBrush StartPoint="0.5,0.5" EndPoint="0.5,1">
+                                                                <GradientStop Offset="0" Color="#FFFF99" />
+                                                                <GradientStop Offset="1" Color="#CC6600" />
+                                                            </LinearGradientBrush>
+                                                        </Border.BorderBrush>
+                                                        <Border.Background>
+                                                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1.2">
+                                                                <GradientStop Offset="0" Color="#FFFF99" />
+                                                                <GradientStop Offset="1" Color="#CC6600" />
+                                                            </LinearGradientBrush>
+                                                        </Border.Background>
+                                                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+			                                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+				                                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                                    </Border>
+                                                </Grid>
+
+                                                <!--<ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="cellBorder" Property="Background" Value="{Binding Background,RelativeSource={RelativeSource TemplatedParent}}"/>
+                                                        <Setter TargetName="cellBorder" Property="BorderBrush" Value="{Binding BorderBrush, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>-->
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
                                 </Style>
                             </DataGrid.CellStyle>
 
@@ -207,7 +240,7 @@
                                 <DataGridTextColumn Binding="{Binding UserId}" 
                                                     Header="ID"
                                                     IsReadOnly="True"
-                                                    CanUserResize="False"
+                                                    CanUserResize="True"
                                                     Width="30"/>
                                 <DataGridTextColumn Binding="{Binding UserName}" 
                                                     Header="Brugernavn"
@@ -218,17 +251,17 @@
                                                     Header="Navn"
                                                     IsReadOnly="True"
                                                     CanUserResize="True"
-                                                    Width="100"/>
+                                                    Width="80"/>
                                 <DataGridTextColumn Binding="{Binding LastName}" 
                                                     Header="Efternavn"
                                                     IsReadOnly="True"
                                                     CanUserResize="True"
-                                                    Width="100"/>
+                                                    Width="80"/>
                                 <DataGridTextColumn Binding="{Binding Email}" 
                                                     Header="Email"
                                                     IsReadOnly="True"
                                                     CanUserResize="True"
-                                                    Width="170"/>
+                                                    Width="170*"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </Grid>
