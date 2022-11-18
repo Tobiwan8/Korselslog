@@ -134,21 +134,80 @@
                         Grid.Column="1"
                         Width="auto"
                         Margin="0,15,15,15">
-                        
+
                         <DataGrid 
                             x:Name="DGUser"
                             IsReadOnly="True"
                             HorizontalAlignment="Right"
                             BorderThickness="0"
                             AutoGenerateColumns="False"
-                            Background="{Binding}">
+                            Background="{Binding}"
+                            CanUserResizeRows="False">
 
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="{x:Type DataGridColumnHeader}">
+                                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                    <Setter Property="Background" Value="#CC6600"/>
+                                    <Setter Property="SeparatorBrush" Value="#CC6600"/>
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                                                <Grid>
+                                                    <Border x:Name="columnHeaderBorder"
+		                                                    BorderThickness="2"
+		                                                    Padding="3,0,3,0">
+                                                        <Border.BorderBrush>
+                                                            <LinearGradientBrush StartPoint="0.5,0.5" EndPoint="0.5,1">
+                                                                <GradientStop Offset="0" Color="#FFFF99" />
+                                                                <GradientStop Offset="1" Color="#CC6600" />
+                                                            </LinearGradientBrush>
+                                                        </Border.BorderBrush>
+                                                        <Border.Background>
+                                                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                                                <GradientStop Offset="0" Color="#FFFF99" />
+                                                                <GradientStop Offset="1" Color="#CC6600" />
+                                                            </LinearGradientBrush>
+                                                        </Border.Background>
+                                                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+			                                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+				                                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                                    </Border>
+                                                </Grid>
+
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="columnHeaderBorder" Property="Background" Value="{Binding Background,RelativeSource={RelativeSource TemplatedParent}}"/>
+                                                        <Setter TargetName="columnHeaderBorder" Property="BorderBrush" Value="{Binding BorderBrush, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                        
+                                    </Setter>
+
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="BorderBrush" Value="#FFFF99"/>
+                                            <Setter Property="Background" Value="#FFFF99"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+
+
+                            <DataGrid.CellStyle>
+                                <Style TargetType="{x:Type DataGridCell}">
+                                    <Setter Property="Background" Value="#FFFF99"/>
+                                    <Setter Property="BorderBrush" Value="#CC6600"/>
+                                </Style>
+                            </DataGrid.CellStyle>
 
                             <DataGrid.Columns>
                                 <DataGridTextColumn Binding="{Binding UserId}" 
                                                     Header="ID"
                                                     IsReadOnly="True"
-                                                    CanUserResize="True"
+                                                    CanUserResize="False"
                                                     Width="30"/>
                                 <DataGridTextColumn Binding="{Binding UserName}" 
                                                     Header="Brugernavn"
@@ -171,11 +230,6 @@
                                                     CanUserResize="True"
                                                     Width="170"/>
                             </DataGrid.Columns>
-                            <DataGrid.Style>
-                                <Style TargetType="{x:Type DataGridColumnHeader}">
-                                    
-                                </Style>
-                            </DataGrid.Style>
                         </DataGrid>
                     </Grid>
                 </Grid>
