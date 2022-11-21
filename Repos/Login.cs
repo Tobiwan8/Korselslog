@@ -7,7 +7,7 @@ namespace Kørselslog.Repos
 {
     internal class Login
     {
-        internal void LoginViaSql(string username, string password)
+        internal static void LoginViaSql(string username, string password)
         {
             Repos.ConnectionString connectionString = new();
             SqlConnection sqlConnection = new(connectionString.ConnectionToSql);

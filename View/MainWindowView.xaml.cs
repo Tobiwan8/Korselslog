@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kørselslog.Repos;
+using System;
 using System.Windows;
 using System.Windows.Input;
 
@@ -15,8 +16,7 @@ namespace Kørselslog.View
 
         private void BindDataGrid()
         {
-            Repos.BindDataGridToApp bindDG = new();
-            bindDG.BindDatagrid(DGUser);
+            BindDataGridToApp.BindDatagrid(DGUser);
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

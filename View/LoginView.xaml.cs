@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Kørselslog.Repos;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Kørselslog.View
@@ -30,15 +31,13 @@ namespace Kørselslog.View
         {
             if (e.Key == Key.Enter)
             {
-                Repos.Login login = new();
-                login.LoginViaSql(txtUser.Text, txtPass.Password);
+                Login.LoginViaSql(txtUser.Text, txtPass.Password);
             }
         }
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Repos.Login login = new();
-            login.LoginViaSql(txtUser.Text, txtPass.Password);
+            Login.LoginViaSql(txtUser.Text, txtPass.Password);
         }
     }
 }

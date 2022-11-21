@@ -6,7 +6,7 @@ namespace Kørselslog.Repos
 {
     internal class BindDataGridToApp
     {
-        internal void BindDatagrid(DataGrid DGUser)
+        internal static void BindDatagrid(DataGrid DGUser)
         {
             ConnectionString connectionString = new();
             SqlConnection sqlConnection = new(connectionString.ConnectionToSql);
