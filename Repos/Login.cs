@@ -36,7 +36,7 @@ namespace Kørselslog.Repos
 
                 if (count == 1)
                 {
-                    Kørselslog.View.MainWindowView dashboard = new(); //Skift ud med user vindue
+                    Kørselslog.View.MainUserWindowView dashboard = new();
                     dashboard.Show();
                     sqlConnection.Close();
                 }

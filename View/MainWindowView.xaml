@@ -48,7 +48,7 @@
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="Kørselslog"
+                    <TextBlock Text="TECK Administration"
                                Foreground="Black"
                                FontSize="15"
                                FontFamily="Montserrat"
@@ -268,8 +268,8 @@
                                 FontSize="18"
                                 FontFamily="Montserrat"
                                 Cursor="Hand"
-                                Margin="0,60,0,0">
-                                <!--Click="BtnUserAdministration_Click">-->
+                                Margin="0,60,0,0"
+                                Click="BtnUserAdministration_Click">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#CC6600"/>
@@ -301,8 +301,8 @@
                                 FontSize="18"
                                 FontFamily="Montserrat"
                                 Cursor="Hand"
-                                Margin="0,60,0,0">
-                                <!--Click="BtnCarAdministration_Click">-->
+                                Margin="0,60,0,0"
+                                Click="BtnCarAdministration_Click">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#CC6600"/>
@@ -334,8 +334,8 @@
                                 FontSize="18"
                                 FontFamily="Montserrat"
                                 Cursor="Hand"
-                                Margin="0,60,0,0">
-                                <!--Click="BtnData_Click">-->
+                                Margin="0,60,0,0"
+                                Click="BtnData_Click">
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#CC6600"/>
@@ -366,11 +366,11 @@
                                 FontSize="18"
                                 FontFamily="Montserrat"
                                 Cursor="Hand"
-                                Margin="0,60,0,0">
-                                <!--Click="BtnLogOut_Click">-->
+                                Margin="0,115,0,0"
+                                Click="BtnLogOut_Click">
                                 <Button.Style>
                                     <Style TargetType="Button">
-                                        <Setter Property="Background" Value="#CC6600"/>
+                                        <Setter Property="Background" Value="Black"/>
                                         <Setter Property="Foreground" Value="#FFFF99"/>
                                         <Style.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">

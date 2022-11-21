@@ -34,5 +34,29 @@ namespace Kørselslog.View
         {
             Application.Current.Shutdown();
         }
+
+        private void BtnUserAdministration_Click(object sender, RoutedEventArgs e)
+        {
+            Kørselslog.View.UserAdministrationView dashboard = new();
+            dashboard.Show();
+        }
+
+        private void BtnCarAdministration_Click(object sender, RoutedEventArgs e)
+        {
+            Kørselslog.View.CarAdministrationView dashboard = new();
+            dashboard.Show();
+        }
+
+        private void BtnData_Click(object sender, RoutedEventArgs e)
+        {
+            Kørselslog.View.KorselslogView dashboard = new();
+            dashboard.Show();
+        }
+
+        private void BtnLogOut_Click(object sender, RoutedEventArgs e)
+        {
+            Kørselslog.View.LoginView dashboard = new();
+            dashboard.Show();
+        }
     }
 }

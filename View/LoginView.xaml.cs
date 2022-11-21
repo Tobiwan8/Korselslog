@@ -39,5 +39,10 @@ namespace Kørselslog.View
         {
             Login.LoginViaSql(txtUser.Text, txtPass.Password);
         }
+
+        private void TextBlock_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Bare ærgerligt, Sonny boy");
+        }
     }
 }
