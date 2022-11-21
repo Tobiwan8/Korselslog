@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Input;
-using System.Data;
-using System.Data.SqlClient;
 
 
 namespace Kørselslog.View
@@ -12,23 +10,13 @@ namespace Kørselslog.View
         public MainWindowView()
         {
             InitializeComponent();
-            BindDatagrid();
+            BindDataGrid();
         }
 
-        private void BindDatagrid()
+        private void BindDataGrid()
         {
-            string connectionString = @"Server = DESKTOP-RDJ3VF9; Initial Catalog = Korselslog; persist security info = true; User ID=sa; Password=funnyHAHA";
-            SqlConnection sqlConnection = new(connectionString);
-            SqlCommand sqlCommand = new("SELECT UserId, UserName, Name, LastName, Email FROM [User]", sqlConnection);
-            DataTable dt = new();
-
-            sqlConnection.Open();
-
-            SqlDataReader dr = sqlCommand.ExecuteReader();
-            dt.Load(dr);
-            DGUser.ItemsSource = dt.DefaultView;
-
-            sqlConnection.Close();
+            Repos.BindDataGridToApp bindDG = new();
+            bindDG.BindDatagrid(DGUser);
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

@@ -264,13 +264,12 @@
                         <StackPanel>
 
                             <Button x:Name="BtnUserAdministration"                       
-                                BorderThickness="0"
                                 Content="Bruger"
                                 FontSize="18"
                                 FontFamily="Montserrat"
                                 Cursor="Hand"
-                                Margin="0,50,0,0">
-                                <!--Click="BtnLogin_Click">-->
+                                Margin="0,60,0,0">
+                                <!--Click="BtnUserAdministration_Click">-->
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#CC6600"/>
@@ -302,8 +301,8 @@
                                 FontSize="18"
                                 FontFamily="Montserrat"
                                 Cursor="Hand"
-                                Margin="0,50,0,0">
-                                <!--Click="BtnLogin_Click">-->
+                                Margin="0,60,0,0">
+                                <!--Click="BtnCarAdministration_Click">-->
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#CC6600"/>
@@ -335,8 +334,8 @@
                                 FontSize="18"
                                 FontFamily="Montserrat"
                                 Cursor="Hand"
-                                Margin="0,50,0,0">
-                                <!--Click="BtnLogin_Click">-->
+                                Margin="0,60,0,0">
+                                <!--Click="BtnData_Click">-->
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#CC6600"/>
@@ -367,8 +366,8 @@
                                 FontSize="18"
                                 FontFamily="Montserrat"
                                 Cursor="Hand"
-                                Margin="0,50,0,0">
-                                <!--Click="BtnLogin_Click">-->
+                                Margin="0,60,0,0">
+                                <!--Click="BtnLogOut_Click">-->
                                 <Button.Style>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="#CC6600"/>
