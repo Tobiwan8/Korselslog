@@ -33,11 +33,15 @@ namespace Kørselslog.View
             {
                 Login.LoginViaSql(txtUser.Text, txtPass.Password);
             }
+            if (Login.IsLoggedIn)
+                this.Close();
         }
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
             Login.LoginViaSql(txtUser.Text, txtPass.Password);
+            if(Login.IsLoggedIn)
+                this.Close();
         }
 
         private void TextBlock_PreviewMouseDown(object sender, MouseButtonEventArgs e)

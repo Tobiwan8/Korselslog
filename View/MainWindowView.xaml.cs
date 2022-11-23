@@ -57,6 +57,8 @@ namespace Kørselslog.View
         {
             Kørselslog.View.LoginView dashboard = new();
             dashboard.Show();
+            this.Close();
+            Login.IsLoggedIn = false;
         }
     }
 }

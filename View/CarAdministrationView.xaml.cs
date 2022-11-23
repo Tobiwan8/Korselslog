@@ -30,6 +30,7 @@ namespace Kørselslog.View
         {
             Kørselslog.View.MainWindowView dashboard = new();
             dashboard.Show();
+            this.Close();
         }
     }
 }

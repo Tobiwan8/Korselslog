@@ -134,69 +134,27 @@
                         <StackPanel>
 
                             <Button x:Name="BtnCreateUser"                       
-                                Content="Opret Bruger"
-                                FontSize="18"
-                                FontFamily="Montserrat"
-                                Cursor="Hand"
-                                Margin="0,60,0,0">
-                                <!--Click="BtnCreateUser_Click">-->
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="Background" Value="#CC6600"/>
-                                        <Setter Property="Foreground" Value="#FFFF99"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#FFFF99"/>
-                                                <Setter Property="Foreground" Value="#CC6600"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
+                                    Content="Opret Bruger"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    Cursor="Hand"
+                                    Margin="0,60,0,0"
+                                    Style="{StaticResource ButtonTheme}"/>
+                            <!--Click="BtnCreateUser_Click">-->
 
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border Width="150" Height="40"
-                                            CornerRadius="20"
-                                            Background="{TemplateBinding Background}">
-                                            <ContentPresenter VerticalAlignment="center"
-                                                          HorizontalAlignment="center"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
+
 
                             <Button x:Name="BtnEditUser"                       
-                                BorderThickness="0"
-                                Content="Rediger Bruger"
-                                FontSize="18"
-                                FontFamily="Montserrat"
-                                Cursor="Hand"
-                                Margin="0,60,0,0">
-                                <!--Click="BtnEditUser_Click">-->
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="Background" Value="#CC6600"/>
-                                        <Setter Property="Foreground" Value="#FFFF99"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#FFFF99"/>
-                                                <Setter Property="Foreground" Value="#CC6600"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
+                                    BorderThickness="0"
+                                    Content="Rediger Bruger"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    Cursor="Hand"
+                                    Margin="0,60,0,0"
+                                    Style="{StaticResource ButtonTheme}"/>
+                            <!--Click="BtnEditUser_Click">-->
 
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border Width="150" Height="40"
-                                            CornerRadius="20"
-                                            Background="{TemplateBinding Background}">
-                                            <ContentPresenter VerticalAlignment="center"
-                                                          HorizontalAlignment="center"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
+
                         </StackPanel>
 
                         <Button x:Name="BtnBack"                       
@@ -206,31 +164,8 @@
                                 FontFamily="Montserrat"
                                 Cursor="Hand"
                                 Margin="0,360,0,0"
-                                Click="BtnBack_Click">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Setter Property="Background" Value="Black"/>
-                                    <Setter Property="Foreground" Value="#FFFF99"/>
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#FFFF99"/>
-                                            <Setter Property="Foreground" Value="#CC6600"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-
-                            <Button.Template>
-                                <ControlTemplate TargetType="Button">
-                                    <Border Width="150" Height="40"
-                                            CornerRadius="20"
-                                            Background="{TemplateBinding Background}">
-                                        <ContentPresenter VerticalAlignment="center"
-                                                          HorizontalAlignment="center"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
+                                Click="BtnBack_Click"
+                                Style="{StaticResource BackButtonTheme}"/>
                     </Grid>
                 </Grid>
             </Grid>

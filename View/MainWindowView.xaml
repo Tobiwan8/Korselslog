@@ -264,134 +264,43 @@
                         <StackPanel>
 
                             <Button x:Name="BtnUserAdministration"                       
-                                Content="Bruger"
-                                FontSize="18"
-                                FontFamily="Montserrat"
-                                Cursor="Hand"
-                                Margin="0,60,0,0"
-                                Click="BtnUserAdministration_Click">
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="Background" Value="#CC6600"/>
-                                        <Setter Property="Foreground" Value="#FFFF99"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#FFFF99"/>
-                                                <Setter Property="Foreground" Value="#CC6600"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
+                                    Content="Bruger"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    Cursor="Hand"
+                                    Margin="0,60,0,0"
+                                    Click="BtnUserAdministration_Click"
+                                    Style="{StaticResource ButtonTheme}"/>
 
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border Width="150" Height="40"
-                                            CornerRadius="20"
-                                            Background="{TemplateBinding Background}">
-                                            <ContentPresenter VerticalAlignment="center"
-                                                          HorizontalAlignment="center"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
 
                             <Button x:Name="BtnCarAdministration"                       
-                                BorderThickness="0"
-                                Content="Biler"
-                                FontSize="18"
-                                FontFamily="Montserrat"
-                                Cursor="Hand"
-                                Margin="0,60,0,0"
-                                Click="BtnCarAdministration_Click">
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="Background" Value="#CC6600"/>
-                                        <Setter Property="Foreground" Value="#FFFF99"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#FFFF99"/>
-                                                <Setter Property="Foreground" Value="#CC6600"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
-
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border Width="150" Height="40"
-                                            CornerRadius="20"
-                                            Background="{TemplateBinding Background}">
-                                            <ContentPresenter VerticalAlignment="center"
-                                                          HorizontalAlignment="center"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
+                                    BorderThickness="0"
+                                    Content="Biler"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    Cursor="Hand"
+                                    Margin="0,60,0,0"
+                                    Click="BtnCarAdministration_Click"
+                                    Style="{StaticResource ButtonTheme}"/>
 
                             <Button x:Name="BtnData"                       
-                                BorderThickness="0"
-                                Content="Kørselslog"
-                                FontSize="18"
-                                FontFamily="Montserrat"
-                                Cursor="Hand"
-                                Margin="0,60,0,0"
-                                Click="BtnData_Click">
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="Background" Value="#CC6600"/>
-                                        <Setter Property="Foreground" Value="#FFFF99"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#FFFF99"/>
-                                                <Setter Property="Foreground" Value="#CC6600"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
-
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border Width="150" Height="40"
-                                            CornerRadius="20"
-                                            Background="{TemplateBinding Background}">
-                                            <ContentPresenter VerticalAlignment="center"
-                                                          HorizontalAlignment="center"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
+                                    BorderThickness="0"
+                                    Content="Kørselslog"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    Cursor="Hand"
+                                    Margin="0,60,0,0"
+                                    Click="BtnData_Click"
+                                    Style="{StaticResource ButtonTheme}"/>
 
                             <Button x:Name="BtnLogOut"
-                                Content="Log Ud"
-                                FontSize="18"
-                                FontFamily="Montserrat"
-                                Cursor="Hand"
-                                Margin="0,115,0,0"
-                                Click="BtnLogOut_Click">
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="Background" Value="Black"/>
-                                        <Setter Property="Foreground" Value="#FFFF99"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#FFFF99"/>
-                                                <Setter Property="Foreground" Value="#CC6600"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
-
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border Width="150" Height="40"
-                                            CornerRadius="20"
-                                            Background="{TemplateBinding Background}">
-                                            <ContentPresenter VerticalAlignment="center"
-                                                          HorizontalAlignment="center"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
+                                    Content="Log Ud"
+                                    FontSize="18"
+                                    FontFamily="Montserrat"
+                                    Cursor="Hand"
+                                    Margin="0,115,0,0"
+                                    Click="BtnLogOut_Click"
+                                    Style="{StaticResource BackButtonTheme}"/>
                         </StackPanel>
                     </Grid>
                 </Grid>

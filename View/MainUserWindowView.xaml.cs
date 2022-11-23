@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Kørselslog.Repos;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Kørselslog.View
@@ -30,6 +31,8 @@ namespace Kørselslog.View
         {
             Kørselslog.View.LoginView dashboard = new();
             dashboard.Show();
+            this.Close();
+            Login.IsLoggedIn = false;
         }
     }
 }

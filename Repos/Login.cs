@@ -7,8 +7,10 @@ namespace Kørselslog.Repos
 {
     internal class Login
     {
+        internal static bool IsLoggedIn {get;set;}
         internal static void LoginViaSql(string username, string password)
         {
+            IsLoggedIn = false;
             Repos.ConnectionString connectionString = new();
             SqlConnection sqlConnection = new(connectionString.ConnectionToSql);
             try
@@ -36,12 +38,14 @@ namespace Kørselslog.Repos
 
                 if (count == 1)
                 {
+                    IsLoggedIn = true;
                     Kørselslog.View.MainUserWindowView dashboard = new();
                     dashboard.Show();
                     sqlConnection.Close();
                 }
                 else if (count2 == 1)
                 {
+                    IsLoggedIn = true;
                     Kørselslog.View.MainWindowView dashboard = new();
                     dashboard.Show();
                     sqlConnection.Close();
