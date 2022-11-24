@@ -11,11 +11,6 @@ namespace Kørselslog.View
         public MainWindowView()
         {
             InitializeComponent();
-            BindDataGrid();
-        }
-
-        private void BindDataGrid()
-        {
             BindDataGridToApp.BindDatagrid(DGUser);
         }
 

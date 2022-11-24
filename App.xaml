@@ -18,7 +18,11 @@
             <DataTemplate DataType="{x:Type viewModel:CreateUserViewModel}">
                 <view:CreateUserView/>
             </DataTemplate>
-            
+
+            <DataTemplate DataType="{x:Type viewModel:EditUserViewModel}">
+                <view:EditUserView/>
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

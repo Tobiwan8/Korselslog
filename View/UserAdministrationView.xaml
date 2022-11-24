@@ -98,8 +98,9 @@
                                     FontFamily="Montserrat"
                                     Cursor="Hand"
                                     Margin="0,60,0,0"
-                                    Style="{StaticResource ButtonTheme}"/>
-                            <!--Click="BtnCreateUser_Click">-->
+                                    Style="{StaticResource ButtonTheme}"
+                                    IsEnabled="True"
+                                    Command="{Binding CreateUserViewCommand}"/>
 
 
 
@@ -110,8 +111,8 @@
                                     FontFamily="Montserrat"
                                     Cursor="Hand"
                                     Margin="0,60,0,0"
-                                    Style="{StaticResource ButtonTheme}"/>
-                            <!--Click="BtnEditUser_Click">-->
+                                    Style="{StaticResource ButtonTheme}"
+                                    Command="{Binding EditUserViewCommand}"/>
 
 
                         </StackPanel>

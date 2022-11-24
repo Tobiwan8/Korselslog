@@ -20,48 +20,48 @@
 
         <StackPanel Margin="5,20,0,0">
             <TextBox Style="{StaticResource TextBoxTheme}"
-                                     VerticalAlignment="Top"
-                                     HorizontalAlignment="left"
-                                     Tag="Fornavn">
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="left"
+                     Tag="Fornavn">
             </TextBox>
 
             <TextBox Style="{StaticResource TextBoxTheme}"
-                                     Margin="0,60,0,0"
-                                     VerticalAlignment="Top"
-                                     HorizontalAlignment="left"
-                                     Tag="Efternavn">
+                     Margin="0,60,0,0"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="left"
+                     Tag="Efternavn">
             </TextBox>
 
             <TextBox Style="{StaticResource TextBoxTheme}"
-                                     Margin="0,60,0,0"
-                                     VerticalAlignment="Top"
-                                     HorizontalAlignment="left"
-                                     Tag="Brugernavn">
+                     Margin="0,60,0,0"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="left"
+                     Tag="Brugernavn">
             </TextBox>
 
             <TextBox Style="{StaticResource TextBoxTheme}"
-                                     Margin="0,60,0,0"
-                                     VerticalAlignment="Top"
-                                     HorizontalAlignment="left"
-                                     Tag="Password">
+                     Margin="0,60,0,0"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="left"
+                     Tag="Password">
             </TextBox>
 
             <TextBox Style="{StaticResource TextBoxTheme}"
-                                     Margin="0,60,0,0"
-                                     VerticalAlignment="Top"
-                                     HorizontalAlignment="left"
-                                     Tag="Email">
+                     Margin="0,60,0,0"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="left"
+                     Tag="Email">
             </TextBox>
         </StackPanel>
 
         <Button x:Name="BtnCreateFinal"                       
-                                BorderThickness="0"
-                                Content="Opret"
-                                FontSize="18"
-                                FontFamily="Montserrat"
-                                Cursor="Hand"
-                                Margin="200,360,0,0"
-                                Style="{StaticResource ButtonTheme}"/>
+                BorderThickness="0"
+                Content="Opret"
+                FontSize="18"
+                FontFamily="Montserrat"
+                Cursor="Hand"
+                Margin="200,360,0,0"
+                Style="{StaticResource ButtonTheme}"/>
         <!--Click="BtnCreateFinal_Click">-->
     </Grid>
 </UserControl>
