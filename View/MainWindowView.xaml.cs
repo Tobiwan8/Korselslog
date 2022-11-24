@@ -39,18 +39,21 @@ namespace Kørselslog.View
         {
             Kørselslog.View.UserAdministrationView dashboard = new();
             dashboard.Show();
+            this.Close();
         }
 
         private void BtnCarAdministration_Click(object sender, RoutedEventArgs e)
         {
             Kørselslog.View.CarAdministrationView dashboard = new();
             dashboard.Show();
+            this.Close();
         }
 
         private void BtnData_Click(object sender, RoutedEventArgs e)
         {
             Kørselslog.View.KorselslogView dashboard = new();
             dashboard.Show();
+            this.Close();
         }
 
         private void BtnLogOut_Click(object sender, RoutedEventArgs e)

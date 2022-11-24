@@ -64,31 +64,8 @@
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             Grid.Column="1"
-                            Click="BtnMinimize_Click">
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#FFFF99"/>
-                                <Setter Property="Foreground" Value="#CC6600"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#CC6600"/>
-                                        <Setter Property="Foreground" Value="#FFFF99"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="18" Height="18"
-                                        CornerRadius="9"
-                                        Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="center"
-                                                      HorizontalAlignment="center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
+                            Click="BtnMinimize_Click"
+                            Style="{StaticResource TitleBarButtonTheme}"/>
 
                     <Button x:Name="BtnClose"
                             BorderThickness="0"
@@ -97,31 +74,8 @@
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             Grid.Column="2"
-                            Click="BtnClose_Click">
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#FFFF99"/>
-                                <Setter Property="Foreground" Value="#CC6600"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#CC6600"/>
-                                        <Setter Property="Foreground" Value="#FFFF99"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="18" Height="18"
-                                        CornerRadius="9"
-                                        Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="center"
-                                                      HorizontalAlignment="center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
+                            Click="BtnClose_Click"
+                            Style="{StaticResource TitleBarButtonTheme}"/>
                 </Grid>
 
                 <Grid Grid.Row="1">
