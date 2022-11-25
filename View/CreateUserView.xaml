@@ -20,12 +20,14 @@
 
         <StackPanel Margin="5,20,0,0">
             <TextBox Style="{StaticResource TextBoxTheme}"
+                     Name="TBFirstName"
                      VerticalAlignment="Top"
                      HorizontalAlignment="left"
                      Tag="Fornavn">
             </TextBox>
 
             <TextBox Style="{StaticResource TextBoxTheme}"
+                     Name="TBLastName"
                      Margin="0,60,0,0"
                      VerticalAlignment="Top"
                      HorizontalAlignment="left"
@@ -33,6 +35,7 @@
             </TextBox>
 
             <TextBox Style="{StaticResource TextBoxTheme}"
+                     Name="TBUserName"
                      Margin="0,60,0,0"
                      VerticalAlignment="Top"
                      HorizontalAlignment="left"
@@ -40,17 +43,19 @@
             </TextBox>
 
             <TextBox Style="{StaticResource TextBoxTheme}"
-                     Margin="0,60,0,0"
-                     VerticalAlignment="Top"
-                     HorizontalAlignment="left"
-                     Tag="Password">
-            </TextBox>
-
-            <TextBox Style="{StaticResource TextBoxTheme}"
+                     Name="DBEmail"
                      Margin="0,60,0,0"
                      VerticalAlignment="Top"
                      HorizontalAlignment="left"
                      Tag="Email">
+            </TextBox>
+
+            <TextBox Style="{StaticResource TextBoxTheme}"
+                     Name="DBPassword"
+                     Margin="0,60,0,0"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="left"
+                     Tag="Password">
             </TextBox>
         </StackPanel>
 
@@ -61,7 +66,7 @@
                 FontFamily="Montserrat"
                 Cursor="Hand"
                 Margin="200,360,0,0"
-                Style="{StaticResource ButtonTheme}"/>
-        <!--Click="BtnUserCreateFinal_Click">-->
+                Style="{StaticResource ButtonTheme}"
+                Click="BtnUserCreateFinal_Click"/>
     </Grid>
 </UserControl>
