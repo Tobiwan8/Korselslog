@@ -6,18 +6,18 @@ namespace Kørselslog.Repos
 {
     internal class BindDataGridToApp
     {
-        internal static void BindDatagrid(DataGrid DGUser)
+        internal static void BindDatagrid(DataGrid dg, string sqlCommand)
         {
             ConnectionString connectionString = new();
             SqlConnection sqlConnection = new(connectionString.ConnectionToSql);
-            SqlCommand sqlCommand = new("SELECT UserId, UserName, Name, LastName, Email FROM [User]", sqlConnection);
+            SqlCommand sqlCom = new(sqlCommand, sqlConnection);
             DataTable dt = new();
 
             sqlConnection.Open();
 
-            SqlDataReader dr = sqlCommand.ExecuteReader();
+            SqlDataReader dr = sqlCom.ExecuteReader();
             dt.Load(dr);
-            DGUser.ItemsSource = dt.DefaultView;
+            dg.ItemsSource = dt.DefaultView;
 
             sqlConnection.Close();
         }

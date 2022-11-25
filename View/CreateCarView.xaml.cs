@@ -2,9 +2,9 @@
 
 namespace Kørselslog.View
 {
-    public partial class CreateUserView : UserControl
+    public partial class CreateCarView : UserControl
     {
-        public CreateUserView()
+        public CreateCarView()
         {
             InitializeComponent();
         }

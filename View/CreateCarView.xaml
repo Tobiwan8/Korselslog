@@ -1,10 +1,10 @@
-﻿<UserControl x:Class="Kørselslog.View.CreateUserView"
+﻿<UserControl x:Class="Kørselslog.View.CreateCarView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Kørselslog.View"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800"
              Background="Transparent">
     <Grid>
@@ -22,39 +22,26 @@
             <TextBox Style="{StaticResource TextBoxTheme}"
                      VerticalAlignment="Top"
                      HorizontalAlignment="left"
-                     Tag="Fornavn">
+                     Tag="Model">
             </TextBox>
 
             <TextBox Style="{StaticResource TextBoxTheme}"
                      Margin="0,60,0,0"
                      VerticalAlignment="Top"
                      HorizontalAlignment="left"
-                     Tag="Efternavn">
+                     Tag="NummerPlade">
             </TextBox>
 
             <TextBox Style="{StaticResource TextBoxTheme}"
                      Margin="0,60,0,0"
                      VerticalAlignment="Top"
                      HorizontalAlignment="left"
-                     Tag="Brugernavn">
+                     Tag="Km Kørt">
             </TextBox>
 
-            <TextBox Style="{StaticResource TextBoxTheme}"
-                     Margin="0,60,0,0"
-                     VerticalAlignment="Top"
-                     HorizontalAlignment="left"
-                     Tag="Password">
-            </TextBox>
-
-            <TextBox Style="{StaticResource TextBoxTheme}"
-                     Margin="0,60,0,0"
-                     VerticalAlignment="Top"
-                     HorizontalAlignment="left"
-                     Tag="Email">
-            </TextBox>
         </StackPanel>
 
-        <Button x:Name="BtnUserCreateFinal"                       
+        <Button x:Name="BtnCarCreateFinal"                       
                 BorderThickness="0"
                 Content="Opret"
                 FontSize="18"
@@ -62,6 +49,6 @@
                 Cursor="Hand"
                 Margin="200,360,0,0"
                 Style="{StaticResource ButtonTheme}"/>
-        <!--Click="BtnUserCreateFinal_Click">-->
+        <!--Click="BtnCarCreateFinal_Click">-->
     </Grid>
 </UserControl>

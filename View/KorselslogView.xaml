@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Kørselslog.View"
+        xmlns:local="clr-namespace:Kørselslog.View" 
+        xmlns:viewModel="clr-namespace:Kørselslog.ViewModel"
         mc:Ignorable="d"
         Title="KorselslogView" Height="550" Width="800"
         WindowStyle="None"
@@ -12,6 +13,10 @@
         MouseDown="Window_MouseDown"
         Background="Transparent"
         AllowsTransparency="True">
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
 
     <Border CornerRadius="20">
         <Border.Background>
@@ -87,25 +92,25 @@
                     <Grid Grid.Column="0">
                         <StackPanel>
 
-                            <Button x:Name="BtnCreateCar"                       
-                                    Content="Opret Bil"
+                            <Button x:Name="BtnUserData"                       
+                                    Content="Se Bruger"
                                     FontSize="18"
                                     FontFamily="Montserrat"
                                     Cursor="Hand"
                                     Margin="0,60,0,0"
-                                    Style="{StaticResource ButtonTheme}"/>
-                            <!--Click="BtnCreateCar_Click">-->
+                                    Style="{StaticResource ButtonTheme}"
+                                    Command="{Binding DataUserViewCommand}"/>
 
-                            <Button x:Name="BtnEditCar"                       
+                            <Button x:Name="BtncarData"                       
                                     BorderThickness="0"
-                                    Content="Rediger Bil"
+                                    Content="Se Bil"
                                     FontSize="18"
                                     FontFamily="Montserrat"
                                     Cursor="Hand"
                                     Margin="0,60,0,0"
-                                    Style="{StaticResource ButtonTheme}"/>
-                            <!--Click="BtnEditCar_Click">-->
-                            
+                                    Style="{StaticResource ButtonTheme}"
+                                    Command="{Binding DataCarViewCommand}"/>
+
                         </StackPanel>
 
                         <Button x:Name="BtnBack"                       
@@ -118,6 +123,11 @@
                                 Click="BtnBack_Click"
                                 Style="{StaticResource BackButtonTheme}"/>
                     </Grid>
+
+                    <ContentControl Grid.Row="1"
+                                    Grid.Column="1"
+                                    Margin="0,0,10,0"
+                                    Content="{Binding CurrentView}"/>
                 </Grid>
             </Grid>
         </Border>

@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kørselslog.View"
-        mc:Ignorable="d"
+        xmlns:view="clr-namespace:Kørselslog.View"
+        xmlns:viewModel="clr-namespace:Kørselslog.ViewModel" 
         Title="CarAdministrationView" Height="550" Width="800"
         WindowStyle="None"
         ResizeMode="NoResize"
@@ -13,6 +14,10 @@
         Background="Transparent"
         AllowsTransparency="True">
 
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    
     <Border CornerRadius="20">
         <Border.Background>
             <ImageBrush ImageSource="/Images/LoginBackground.jpg"/>
@@ -93,8 +98,8 @@
                                     FontFamily="Montserrat"
                                     Cursor="Hand"
                                     Margin="0,60,0,0"
-                                    Style="{StaticResource ButtonTheme}"/>
-                            <!--Click="BtnCreateCar_Click">-->
+                                    Style="{StaticResource ButtonTheme}"
+                                    Command="{Binding CreateCarViewCommand}"/>
 
                             <Button x:Name="BtnEditCar"                       
                                     BorderThickness="0"
@@ -103,9 +108,9 @@
                                     FontFamily="Montserrat"
                                     Cursor="Hand"
                                     Margin="0,60,0,0"
-                                    Style="{StaticResource ButtonTheme}"/>
-                            <!--Click="BtnEditCar_Click">-->
-                           
+                                    Style="{StaticResource ButtonTheme}"
+                                    Command="{Binding EditCarViewCommand}"/>
+
                         </StackPanel>
 
                         <Button x:Name="BtnBack"                       
@@ -119,6 +124,11 @@
                                 Style="{StaticResource BackButtonTheme}"/>
                         
                     </Grid>
+
+                    <ContentControl Grid.Row="1"
+                                    Grid.Column="1"
+                                    Margin="0,0,10,0"
+                                    Content="{Binding CurrentView}"/>
                 </Grid>
             </Grid>
         </Border>

@@ -23,6 +23,23 @@
                 <view:EditUserView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:CreateCarViewModel}">
+                <view:CreateCarView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:EditCarViewModel}">
+                <view:EditCarView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:DataUserViewModel}">
+                <view:DataUserView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:DataCarViewModel}">
+                <view:DataCarView/>
+            </DataTemplate>
+
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

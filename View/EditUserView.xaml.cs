@@ -8,7 +8,7 @@ namespace Kørselslog.View
         public EditUserView()
         {
             InitializeComponent();
-            BindDataGridToApp.BindDatagrid(DGUser);
+            BindDataGridToApp.BindDatagrid(DGUser, "SELECT UserId, UserName, Name, LastName, Email FROM [User]");
         }
     }
 }

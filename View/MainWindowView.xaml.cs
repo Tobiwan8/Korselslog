@@ -1,5 +1,4 @@
 ﻿using Kørselslog.Repos;
-using System;
 using System.Windows;
 using System.Windows.Input;
 
@@ -11,7 +10,7 @@ namespace Kørselslog.View
         public MainWindowView()
         {
             InitializeComponent();
-            BindDataGridToApp.BindDatagrid(DGUser);
+            BindDataGridToApp.BindDatagrid(DGUser, "SELECT UserId, UserName, Name, LastName, Email FROM [User]");
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
