@@ -1,38 +1,46 @@
 ﻿using System.Windows;
-using System.Data;
 using System.Data.SqlClient;
+using Kørselslog.Model;
+using System;
 
 namespace Kørselslog.Repos
 {
     internal class AddUserToDataBase
     {
-        private string _message = "Indtast venligst alle værdier";
-        private bool IsValid(string name, string lastname, string username, string email, string password)
+        private readonly string _message = "Indtast venligst alle værdier";
+
+        private static bool IsValid(User u)
         {
-            if (name == string.Empty || lastname == string.Empty || username == string.Empty || email == string.Empty || password == string.Empty)
+            if(u.UserName == string.Empty || u.Password == string.Empty || u.Name == string.Empty || u.LastName == string.Empty || u.Email == string.Empty)
                 return false;
-            return true;
+            else
+                return true;
         }
 
-        internal void AddUserToSqlDataBase(string username, string password, string name, string lastname, string email)
+        internal void AddUserToSqlDataBase(User user)
         {
-            if (!IsValid(name, lastname, username, email, password))
+            if (IsValid(user))
             {
-                MessageBox.Show(_message, "FEJL", MessageBoxButton.OK, MessageBoxImage.Error);
+                try
+                {
+                    ConnectionString connectionString = new();
+                    SqlConnection sqlCon = new(connectionString.ConnectionToSql);
+                    sqlCon.Open();
+
+                    SqlCommand insertNewUserData = new($"INSERT INTO [User] VALUES ('{user.UserName}', '{user.Password}', '{user.Name}', '{user.LastName}', '{user.Email}')", sqlCon);
+                    insertNewUserData.ExecuteNonQuery();
+
+                    MessageBox.Show("Bruger oprettet");
+
+                    sqlCon.Close();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
             }
             else
-            {
-                ConnectionString connectionString = new();
-                SqlConnection sqlCon = new (connectionString.ConnectionToSql);
-                sqlCon.Open();
-
-                SqlCommand insertNewUserData = new($"INSERT INTO [User] VALUES ('{username}','{password}', '{name}', '{lastname}', '{email}')", sqlCon);
-                insertNewUserData.ExecuteNonQuery();
-
-                MessageBox.Show("Success");
-
-                sqlCon.Close();
-            }
+                MessageBox.Show(_message, "FEJL", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }

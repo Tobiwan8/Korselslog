@@ -21,6 +21,7 @@
                                      FontSize="15"
                                      FontWeight="DemiBold"
                                      Foreground="Black"
+                                     CaretBrush="Black"
                                      x:Name="TextBoxT"/>
 
                             <TextBlock IsHitTestVisible="False"
