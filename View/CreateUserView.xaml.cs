@@ -52,7 +52,7 @@ namespace Kørselslog.View
         {
             User user = new() { UserName = DBUserName.Text, Password = DBPassword.Text, Name = DBFirstName.Text, LastName = DBLastName.Text, Email = DBEmail.Text };
 
-            AddUserToDataBase addUserToDataBase = new AddUserToDataBase();
+            AddUserToDataBase addUserToDataBase = new();
             addUserToDataBase.AddUserToSqlDataBase(user);
         }
     }
