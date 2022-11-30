@@ -7,6 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              Background="Transparent">
+    
     <Grid>
         <Border BorderThickness="5,0,0,0"
                 Margin="30,0,0,30">
@@ -32,7 +33,8 @@
                          FontSize="15"
                          FontWeight="DemiBold"
                          Foreground="Black"
-                         CaretBrush="Black">
+                         CaretBrush="Black"
+                         TextAlignment="Left">
                     <TextBox.Style>
                         <Style TargetType="TextBox">
                             <Setter Property="Template">
@@ -44,6 +46,8 @@
                                                     Background="White"
                                                     Width="200" Height="40">
                                             </Border>
+                                        <ScrollViewer Margin="0,6,0,0"
+                                                x:Name="PART_ContentHost"/>
                                         </Grid>
                                     </ControlTemplate>
                                 </Setter.Value>
@@ -99,6 +103,8 @@
                                                     Background="White"
                                                     Width="200" Height="40">
                                             </Border>
+                                            <ScrollViewer Margin="0,6,0,0"
+                                                x:Name="PART_ContentHost"/>
                                         </Grid>
                                     </ControlTemplate>
                                 </Setter.Value>
@@ -152,6 +158,8 @@
                                                     Background="White"
                                                     Width="200" Height="40">
                                             </Border>
+                                            <ScrollViewer Margin="0,6,0,0"
+                                                x:Name="PART_ContentHost"/>
                                         </Grid>
                                     </ControlTemplate>
                                 </Setter.Value>
@@ -206,6 +214,8 @@
                                                     Background="White"
                                                     Width="200" Height="40">
                                             </Border>
+                                            <ScrollViewer Margin="0,6,0,0"
+                                                x:Name="PART_ContentHost"/>
                                         </Grid>
                                     </ControlTemplate>
                                 </Setter.Value>
@@ -259,6 +269,8 @@
                                                     Background="White"
                                                     Width="200" Height="40">
                                             </Border>
+                                            <ScrollViewer Margin="0,6,0,0"
+                                                x:Name="PART_ContentHost"/>
                                         </Grid>
                                     </ControlTemplate>
                                 </Setter.Value>

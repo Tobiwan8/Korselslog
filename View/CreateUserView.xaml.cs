@@ -50,17 +50,10 @@ namespace Kørselslog.View
         }
         private void BtnUserCreateFinal_Click(object sender, RoutedEventArgs e)
         {
-            //var person = new Person() { DBUserName.Text, DBPassword.Text, DBFirstName.Text, DBLastName.Text, DBEmail.Text }
             User user = new() { UserName = DBUserName.Text, Password = DBPassword.Text, Name = DBFirstName.Text, LastName = DBLastName.Text, Email = DBEmail.Text };
-            //user.UserName = DBUserName.Text;
-            //user.Password = DBPassword.Text;
-            //user.Name = DBFirstName.Text;
-            //user.LastName = DBLastName.Text;
-            //user.Email = DBEmail.Text;
 
             AddUserToDataBase addUserToDataBase = new AddUserToDataBase();
             addUserToDataBase.AddUserToSqlDataBase(user);
-            //MessageBox.Show(DBUserName.Text, "FEJL", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }
