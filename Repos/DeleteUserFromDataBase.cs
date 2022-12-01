@@ -1,15 +1,12 @@
 ﻿using System.Windows;
 using System.Data.SqlClient;
-using Kørselslog.Model;
 using System;
-using System.Windows.Controls;
-using System.Data;
 
 namespace Kørselslog.Repos
 {
     internal class DeleteUserFromDataBase
     {
-        internal void DeleteUser(object row)
+        internal static void DeleteUser(object row)
         {
             try
             {

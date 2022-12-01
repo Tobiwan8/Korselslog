@@ -1,0 +1,208 @@
+﻿<UserControl x:Class="Kørselslog.View.EditUserCompleteView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kørselslog.View"
+             mc:Ignorable="d" 
+              d:DesignHeight="450" d:DesignWidth="800"
+             Background="Transparent">
+
+    <Grid>
+        <Border BorderThickness="5,0,0,0"
+                Margin="30,0,0,30">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1">
+                    <GradientStop Color="#CC6600" Offset="0"/>
+                    <GradientStop Color="#FFFF99" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+        </Border>
+
+        <StackPanel Margin="5,20,0,0">
+
+            <Grid>
+                <TextBox x:Name="DBEditFirstName"
+                         HorizontalAlignment="left"
+                         KeyDown="DBEditFirstName_KeyDown"
+                         BorderThickness="0"
+                         VerticalAlignment="Center"
+                         Padding="5"
+                         FontFamily="Montserrat"
+                         FontSize="15"
+                         FontWeight="DemiBold"
+                         Foreground="Black"
+                         CaretBrush="Black"
+                         TextAlignment="Left">
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type TextBox}">
+                                        <Grid>
+                                            <Rectangle StrokeThickness="1"/>
+                                            <Border CornerRadius="10"
+                                                    Background="White"
+                                                    Width="200" Height="40">
+                                            </Border>
+                                            <ScrollViewer Margin="0,6,0,0"
+                                                x:Name="PART_ContentHost"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+            </Grid>
+
+            <Grid>
+                <TextBox x:Name="DBEditLastName"
+                         HorizontalAlignment="left"
+                         KeyDown="DBEditLastName_KeyDown"
+                         BorderThickness="0"
+                         VerticalAlignment="Center"
+                         Padding="5"
+                         FontFamily="Montserrat"
+                         FontSize="15"
+                         FontWeight="DemiBold"
+                         Foreground="Black"
+                         CaretBrush="Black"
+                         Margin="0,60">
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type TextBox}">
+                                        <Grid>
+                                            <Rectangle StrokeThickness="1"/>
+                                            <Border CornerRadius="10"
+                                                    Background="White"
+                                                    Width="200" Height="40">
+                                            </Border>
+                                            <ScrollViewer Margin="0,6,0,0"
+                                                x:Name="PART_ContentHost"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+            </Grid>
+
+            <Grid>
+                <TextBox x:Name="DBEditUserName"
+                         HorizontalAlignment="left"
+                         KeyDown="DBEditUserName_KeyDown"
+                         BorderThickness="0"
+                         VerticalAlignment="Center"
+                         Padding="5"
+                         FontFamily="Montserrat"
+                         FontSize="15"
+                         FontWeight="DemiBold"
+                         Foreground="Black"
+                         CaretBrush="Black">
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type TextBox}">
+                                        <Grid>
+                                            <Rectangle StrokeThickness="1"/>
+                                            <Border CornerRadius="10"
+                                                    Background="White"
+                                                    Width="200" Height="40">
+                                            </Border>
+                                            <ScrollViewer Margin="0,6,0,0"
+                                                x:Name="PART_ContentHost"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+            </Grid>
+
+            <Grid>
+                <TextBox x:Name="DBEditEmail"
+                         HorizontalAlignment="left"
+                         KeyDown="DBEditEmail_KeyDown"
+                         BorderThickness="0"
+                         VerticalAlignment="Center"
+                         Padding="5"
+                         FontFamily="Montserrat"
+                         FontSize="15"
+                         FontWeight="DemiBold"
+                         Foreground="Black"
+                         CaretBrush="Black"
+                         Margin="0,60">
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type TextBox}">
+                                        <Grid>
+                                            <Rectangle StrokeThickness="1"/>
+                                            <Border CornerRadius="10"
+                                                    Background="White"
+                                                    Width="200" Height="40">
+                                            </Border>
+                                            <ScrollViewer Margin="0,6,0,0"
+                                                x:Name="PART_ContentHost"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+            </Grid>
+
+            <Grid>
+                <TextBox x:Name="DBEditPassword"
+                         HorizontalAlignment="left"
+                         KeyDown="DBEditPassword_KeyDown"
+                         BorderThickness="0"
+                         VerticalAlignment="Center"
+                         Padding="5"
+                         FontFamily="Montserrat"
+                         FontSize="15"
+                         FontWeight="DemiBold"
+                         Foreground="Black"
+                         CaretBrush="Black">
+                    <TextBox.Style>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type TextBox}">
+                                        <Grid>
+                                            <Rectangle StrokeThickness="1"/>
+                                            <Border CornerRadius="10"
+                                                    Background="White"
+                                                    Width="200" Height="40">
+                                            </Border>
+                                            <ScrollViewer Margin="0,6,0,0"
+                                                x:Name="PART_ContentHost"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+            </Grid>
+        </StackPanel>
+
+        <Button x:Name="BtnUserEditFinal"                       
+                BorderThickness="0"
+                Content="Opret"
+                FontSize="18"
+                FontFamily="Montserrat"
+                Cursor="Hand"
+                Margin="200,360,0,0"
+                Style="{StaticResource ButtonTheme}"
+                Click="BtnUserEditFinal_Click"/>
+    </Grid>
+</UserControl>

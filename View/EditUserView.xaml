@@ -2,11 +2,17 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModel="clr-namespace:Kørselslog.ViewModel"
              xmlns:local="clr-namespace:Kørselslog.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="450"
              Background="Transparent">
+
+    <!--<Window.DpiChanged>
+        <viewModel:MainViewModel/>
+    </Window.DpiChanged>-->
+
     <Grid>
         <DataGrid x:Name="DGUser"
                   IsReadOnly="True"
@@ -114,6 +120,8 @@
                                     IsReadOnly="True"
                                     CanUserResize="True"
                                     Width="100"/>
+                <DataGridTextColumn Binding="{Binding Password}"
+                                    Visibility="Collapsed"/>
                 <DataGridTextColumn Binding="{Binding Name}"
                                     Header="Navn"
                                     IsReadOnly="True"
@@ -130,11 +138,13 @@
                                     CanUserResize="True"
                                     Width="170*"/>
                 
+                
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button x:Name="BtnEditUser"
                                     Click="BtnEditUser_Click"
+                                    Command="{Binding EditUserCompleteViewCommand}"
                                     Style="{StaticResource TitleBarButtonTheme}"
                                     Cursor="Hand">
                                 <Button.Background>

@@ -39,6 +39,10 @@
                 <view:DataCarView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:EditUserCompleteViewModel}">
+                <view:EditUserCompleteView/>
+            </DataTemplate>
+
 
         </ResourceDictionary>
     </Application.Resources>

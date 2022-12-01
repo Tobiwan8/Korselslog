@@ -10,6 +10,7 @@ namespace Kørselslog.ViewModel
         public RelayCommand EditCarViewCommand { get; set; }
         public RelayCommand DataUserViewCommand { get; set; }
         public RelayCommand DataCarViewCommand { get; set; }
+        public RelayCommand EditUserCompleteViewCommand { get; set; }
 
         public CreateUserViewModel CreateUserVM { get; set; }
         public EditUserViewModel EditUserVM { get; set; }
@@ -17,6 +18,7 @@ namespace Kørselslog.ViewModel
         public EditCarViewModel EditCarVM { get; set; }
         public DataUserViewModel DataUserVM { get; set; }
         public DataCarViewModel DataCarVM { get; set; }
+        public EditUserCompleteViewModel EditUserCompleteVM { get; set; }
 
         private object _currentView;
 
@@ -38,6 +40,7 @@ namespace Kørselslog.ViewModel
             EditCarVM = new EditCarViewModel();
             DataUserVM = new DataUserViewModel();
             DataCarVM = new DataCarViewModel();
+            EditUserCompleteVM = new EditUserCompleteViewModel();
 
             CreateUserViewCommand = new RelayCommand(o =>
             {
@@ -67,6 +70,11 @@ namespace Kørselslog.ViewModel
             DataCarViewCommand = new RelayCommand(o =>
             {
                 CurrentView = DataCarVM;
+            });
+
+            EditUserCompleteViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = EditUserCompleteVM;
             });
         }
     }
