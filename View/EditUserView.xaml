@@ -9,10 +9,7 @@
              d:DesignHeight="450" d:DesignWidth="450"
              Background="Transparent">
 
-    <!--<Window.DpiChanged>
-        <viewModel:MainViewModel/>
-    </Window.DpiChanged>-->
-
+    
     <Grid>
         <DataGrid x:Name="DGUser"
                   IsReadOnly="True"
@@ -144,7 +141,6 @@
                         <DataTemplate>
                             <Button x:Name="BtnEditUser"
                                     Click="BtnEditUser_Click"
-                                    Command="{Binding EditUserCompleteViewCommand}"
                                     Style="{StaticResource TitleBarButtonTheme}"
                                     Cursor="Hand">
                                 <Button.Background>

@@ -126,7 +126,14 @@
 
                     <ContentControl Grid.Column="1"
                                     Margin="0,0,10,0"
+                                    x:Name="ContentControl"
                                     Content="{Binding CurrentView}"/>
+
+                    <ContentControl Grid.Column="1"
+                                    Margin="0,0,10,0"
+                                    x:Name="ContentControl2">
+                        <local:EditUserCompleteView x:Name="EditUserComplete" Visibility="Collapsed"/>
+                    </ContentControl>
                 </Grid>
             </Grid>
         </Border>

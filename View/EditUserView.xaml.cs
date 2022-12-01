@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Windows;
 using System.Windows.Controls;
 using Kørselslog.Model;
 using Kørselslog.Repos;
@@ -15,14 +16,17 @@ namespace Kørselslog.View
 
         private void BtnEditUser_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            DataRowView row = (DataRowView)DGUser.SelectedItem;
+            //DataRowView row = (DataRowView)DGUser.SelectedItem;
 
-            User user = new() { UserName = row["UserName"].ToString() , Password = row["Password"].ToString(), Name = row["Name"].ToString(), LastName = row["LastName"].ToString(), Email = row["Email"].ToString() };
+            //User user = new() { UserName = row["UserName"].ToString() , Password = row["Password"].ToString(), Name = row["Name"].ToString(), LastName = row["LastName"].ToString(), Email = row["Email"].ToString() };
 
-
-            Kørselslog.View.EditUserCompleteView dashboard = new();
-            dashboard.Show();
-            this.Close();
+            Window parentWindow = Application.Current.MainWindow;
+            
+            if(parentWindow != null)
+            {
+                this.Visibility = Visibility.Collapsed;
+                (parentWindow as UserAdministrationView).EditUserComplete.Visibility = Visibility.Visible;
+            }
         }
 
         private void BtnDeleteUser_Click(object sender, System.Windows.RoutedEventArgs e)
